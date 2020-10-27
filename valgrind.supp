@@ -1,0 +1,17 @@
+{
+    bash_wrapper_errors
+    Memcheck:Leak
+    fun:make_variable_value
+    obj:/usr/bin/bash
+}
+{
+    bash_wrapper_errors_1
+    Memcheck:Leak
+    ...
+    fun:xmalloc
+    obj:/usr/bin/bash
+    fun:set_default_locale
+    obj:/usr/bin/bash
+    fun:main
+    obj:/usr/bin/bash
+}
