@@ -1,7 +1,13 @@
-#include <iostream>
+/*
+ * 程序入口
+ */
 
-int main(int argc, char const *argv[])
-{
-    std::cout << "Hello, CC2020!" << std::endl;
+#include "Distribution_App.hpp"
+
+int main() {
+    const char* input_file_name = "case-2-input.txt";
+    const char* output_file_name = "case-2-output.txt";
+    distribution_app app(input_file_name, output_file_name);
+    app.run();
     return 0;
 }
