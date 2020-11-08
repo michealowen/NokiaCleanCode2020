@@ -4,10 +4,13 @@
 
 #include "Distribution_App.hpp"
 
-int main() {
-    const char* input_file_name = "case-2-input.txt";
-    const char* output_file_name = "case-2-output.txt";
-    distribution_app app(input_file_name, output_file_name);
+#include <iostream>
+#include <string>
+
+int main(int argv, char* argc[]) {
+    std::string in(argc[1]);
+    //std::cout << argv << "," << argc[1] << std::endl;
+    distribution_app app(in.c_str());
     app.run();
     return 0;
 }

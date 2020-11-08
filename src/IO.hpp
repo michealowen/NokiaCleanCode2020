@@ -11,7 +11,7 @@ void read(const char* file_name, std::vector<double>& data_1, std::vector<std::v
 /*
  * 写文件
  */
-void write(const char* file_name, std::vector<std::vector<int>>& data_3);
+void write(std::vector<std::vector<int>>& data_3);
 
 #endif // _IO_HPP_
 

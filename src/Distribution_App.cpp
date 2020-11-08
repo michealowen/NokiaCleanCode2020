@@ -2,7 +2,7 @@
 #include "IO.hpp"
 #include "Pool.hpp"
 #include "Manifest.hpp"
-#include "Algorithm"
+#include "Algorithm.hpp"
 
 #include <vector>
 #include <iostream>
@@ -47,6 +47,6 @@ void distribution_app::run() const
     }
 
     /* 写入数据 */
-    write(output_file_name, data_3);
+    write(data_3);
     //std::cout << "ok" << std::endl;
 }

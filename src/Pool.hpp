@@ -10,6 +10,9 @@ public:
 	pool(const double rp, const double pmr)
 		: r_pool(rp), pool_min_rate(pmr)
 	{};
+	
+	~pool()
+	{};
 
 	double get_r_pool() const ;
 

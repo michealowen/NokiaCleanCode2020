@@ -24,13 +24,11 @@ void read(const char* file_name, std::vector<double>& data_1, std::vector<std::v
 	{
 		// 换行
 		getc(fp);
-		getc(fp);
 		// 四个城市
 		for (int i = 0; i < CITY_NUM; ++i) {
 			fscanf(fp, "%lf,%lf,%lf,%lf", 
 				&data_2[week_count][i][0], &data_2[week_count][i][1], &data_2[week_count][i][2], &data_2[week_count][i][3]);
 			// 换行
-			getc(fp);
 			getc(fp);
 		}
 		++week_count;
@@ -39,30 +37,23 @@ void read(const char* file_name, std::vector<double>& data_1, std::vector<std::v
 }
 
 /*
- * 写文件
+ * stdout print
  */
-void write(const char* file_name, std::vector<std::vector<int>>& data_3)
+void write(std::vector<std::vector<int>>& data_3)
 {
-	FILE* fp = nullptr;
-	fp = fopen(file_name, "wb");
-	// 判断文件是否打开失败
-	if (fp == nullptr)
-		std::cout << "open read file failed" << std::endl;
-	for (auto& l : data_3) {
-		for (int i = 0; i < CITY_NUM; ++i) {
-			fprintf(fp, "%d", l[i]);
-			std::cout << l[i];
-			if (i < l.size() - 1)
+	for(int i = 0; i < data_3.size(); ++i){
+		for (int j = 0; j < CITY_NUM; ++j) {
+			std::cout << data_3[i][j];
+			if (j < CITY_NUM - 1)
 			{
-				fputc(',', fp);
 				std::cout << ',';
 			}
-			else {
-				fputc('\r', fp);
-				fputc('\n', fp);
-				std::cout << '\r' << '\n';
+			else{
+				std::cout << '\n';
 			}
+			//else if(i < data_3.size() - 1) {
+			//        std::cout << '\n';
+			//}
 		}
 	}
-	fclose(fp);
 }

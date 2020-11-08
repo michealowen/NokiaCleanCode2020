@@ -1,7 +1,8 @@
 /*
  * 城市详细清单头文件
  */
-#ifndef _MENIFEST_H_
+#ifndef _MENIFEST_HPP_
+#define _MENIFEST_HPP_
 
 #define CITY_NUM 4
 #define OVER_BOOK_FACTOR_SM_DEFAULT 1
@@ -25,7 +26,10 @@ public:
      */
     manifest()
         :r_sum_prev(0), O_SM_prev(OVER_BOOK_FACTOR_SM_DEFAULT), O_Dis_prev(OVER_BOOK_FACTOR_DIS_DEFAULT)
-    {}
+    {};
+    
+    ~manifest()
+    {};
 
     /*
      * 获取本周最大需求
@@ -201,6 +205,5 @@ private:
     void cal_max_shared_other();
 };
 
-#define _MENIFEST_H_
-#endif _MENIFEST_H_
+#endif // _MENIFEST_HPP_
 

@@ -1,4 +1,4 @@
-#include "manifest.hpp"
+#include "Manifest.hpp"
 
 #include <math.h>
 #include <algorithm>

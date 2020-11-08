@@ -9,9 +9,12 @@
 class distribution_app
 {
 public:
-	distribution_app(const char* ifn, const char* ofn)
-		:input_file_name(ifn), output_file_name(ofn)
-	{}
+	distribution_app(const char* ifn)
+		:input_file_name(ifn)
+	{};
+
+	~distribution_app()
+	{};
 
 	/*
 	 * 程序运行入口
@@ -19,7 +22,6 @@ public:
 	void run() const;
 private:
 	const char* input_file_name;
-	const char* output_file_name;
 };
 
 #endif // !_DISTRIBUTION_HPP
