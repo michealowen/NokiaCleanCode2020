@@ -4,9 +4,6 @@
 *.o
 *.obj
 
-# shell
-*.sh
-
 # Compiled Dynamic libraries
 *.so
 *.dylib
