@@ -26,5 +26,11 @@ build/*
 # testcase
 testcases/*
 
-# readme
-README.md
+# latex
+latex/*
+
+#html
+html/*
+
+#doxfile
+Doxyfile
